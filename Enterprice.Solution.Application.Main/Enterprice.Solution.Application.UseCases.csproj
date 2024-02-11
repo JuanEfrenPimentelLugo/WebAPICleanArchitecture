@@ -1,0 +1,25 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+	  <TargetFramework>net8.0</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
+	  <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" Version="12.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="8.0.0" />
+    <PackageReference Include="System.Net.Http.Json" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Enterprice.Solution.Application.DTO\Enterprice.Solution.Application.DTO.csproj" />
+    <ProjectReference Include="..\Enterprice.Solution.Application.Interface\Enterprice.Solution.Application.Interface.csproj" />
+    <ProjectReference Include="..\Enterprice.Solution.Application.Validator\Enterprice.Solution.Application.Validator.csproj" />
+    <ProjectReference Include="..\Enterprice.Solution.Domain.Entity\Enterprice.Solution.Domain.csproj" />
+    <ProjectReference Include="..\Enterprice.Solution.Persistence\Enterprice.Solution.Persistence.csproj" />
+    <ProjectReference Include="..\Enterprice.Solution.Transversal.Common\Enterprice.Solution.Transversal.Common.csproj" />
+  </ItemGroup>
+
+</Project>
