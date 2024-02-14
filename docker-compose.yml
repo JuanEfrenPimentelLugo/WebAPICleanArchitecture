@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  enterprice.solution.services.webapi:
+    image: ${DOCKER_REGISTRY-}enterpricesolutionserviceswebapi
+    build:
+      context: .
+      dockerfile: Enterprice.Solution.Services.WebApi/Dockerfile
