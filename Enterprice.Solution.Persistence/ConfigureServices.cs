@@ -15,7 +15,8 @@ namespace Enterprice.Solution.Persistence
             services.AddSingleton<DapperContext>();
             services.AddScoped<AuditableEntitySaveChangesInterceptor>();
             services.AddDbContext<ApplicationDbContext>(options =>
-                    options.UseSqlServer(configuration.GetConnectionString("NorthwindConnection"),
+                    //options.UseSqlServer(configuration.GetConnectionString("NorthwindConnection"),
+                    options.UseNpgsql(configuration.GetConnectionString("NorthwindConnection"),
                     builder => builder.MigrationsAssembly(typeof(ApplicationDbContext).Assembly.FullName)));
             services.AddScoped<ICustomersRepository, CustomersRepository>();
             services.AddScoped<IUsersRepository, UsersRepository>();

@@ -19,12 +19,13 @@ namespace Enterprice.Solution.Persistence.Repositories
         {
             using (var connection = _context.CreateConnection())
             {
-                var query = "UsersGetByUserAndPassword";
+                //var query = "UsersGetByUserAndPassword";
+                var query = "select public.fn_users_get_by_user_and_password(@UserName,@Password)";
                 var parameters = new DynamicParameters();
                 parameters.Add("UserName", userName);
                 parameters.Add("Password", password);
 
-                var user = connection.QuerySingle<User>(query, param: parameters, commandType: CommandType.StoredProcedure);
+                var user = connection.QuerySingle<User>(query, param: parameters, commandType: CommandType.Text);
                 return user;
             }
         }

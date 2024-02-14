@@ -1,4 +1,5 @@
 ﻿using Microsoft.Extensions.Configuration;
+using Npgsql;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -18,6 +19,7 @@ namespace Enterprice.Solution.Persistence.Contexts
             _connectionString = configuration.GetConnectionString("NorthwindConnection");
         }
 
-        public IDbConnection CreateConnection() => new SqlConnection(_connectionString);
+        //public IDbConnection CreateConnection() => new SqlConnection(_connectionString);
+        public IDbConnection CreateConnection() => new NpgsqlConnection(_connectionString);
     }
 }

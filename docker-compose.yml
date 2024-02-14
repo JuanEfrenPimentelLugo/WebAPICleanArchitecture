@@ -6,3 +6,9 @@ services:
     build:
       context: .
       dockerfile: Enterprice.Solution.Services.WebApi/Dockerfile
+    depends_on:
+      - db
+
+  db:
+    container_name: postgres-db
+    image: postgres:16
