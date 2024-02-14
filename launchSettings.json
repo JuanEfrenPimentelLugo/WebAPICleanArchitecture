@@ -1,0 +1,15 @@
+{
+  "profiles": {
+    "enterprice.solution.services.webapi": {
+      "commandName": "DockerCompose",
+      "commandVersion": "1.0",
+      "composeLaunchAction": "LaunchBrowser",
+      "composeLaunchServiceName": "enterprice.solution.services.webapi",
+      "composeLaunchUrl": "{Scheme}://localhost:{ServicePort}/swagger",
+      "serviceActions": {
+        "db": "StartWithoutDebugging",
+        "enterprice.solution.services.webapi": "StartDebugging"
+      }
+    }
+  }
+}
