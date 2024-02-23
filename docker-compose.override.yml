@@ -14,7 +14,7 @@ services:
       - ${APPDATA}/ASP.NET/Https:/home/app/.aspnet/https:ro
   db:
     environment:
-      POSTGRES_DB: dev-db
+      POSTGRES_DB: northwind
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
     ports:
